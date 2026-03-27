@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logoIcon from "@/assets/logo-icon.png";
+import logoIcon from "@/assets/oak-logo.png";
 
 const navItems = ["Services", "About", "Domains", "Contact"];
 
