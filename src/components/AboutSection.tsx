@@ -21,7 +21,7 @@ const AboutSection = () => {
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
               <p>
                 Wiseful Oak Systems is led by Carlos Alexandre, a seasoned
-                Software Development Engineer with over a decade of experience
+                Software Development Engineer with over 15 years of experience
                 delivering high-impact solutions across multiple industries.
               </p>
               <p>
