@@ -25,7 +25,7 @@ const ContactSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <a
-              href="mailto:contact@wisefuloak.com"
+              href="mailto:wisefuloaksystems@pm.me"
               className="flex items-center gap-3 px-6 py-3 rounded-md bg-primary text-primary-foreground font-body font-semibold hover:opacity-90 transition-opacity"
             >
               <Mail className="w-5 h-5" />
