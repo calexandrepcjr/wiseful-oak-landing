@@ -17,7 +17,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logoIcon} alt="Wiseful Oak Systems" width={48} height={48} />
+          <img src={logoIcon} alt="Wiseful Oak Systems" className="w-10 h-10 md:w-12 md:h-12" />
           <span className="font-display text-lg font-semibold text-foreground tracking-tight">
             Wiseful Oak Systems
           </span>
