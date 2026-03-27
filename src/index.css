@@ -120,3 +120,14 @@
     box-shadow: var(--shadow-elevated);
   }
 }
+
+/* Hide any third-party injected badges/widgets */
+body > div:not(#root),
+body > iframe,
+body > a[style*="fixed"],
+body > div[style*="fixed"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
