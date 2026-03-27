@@ -45,7 +45,7 @@ const AboutSection = () => {
             className="space-y-6"
           >
             {[
-              { number: "10+", label: "Years of Engineering Experience" },
+              { number: "15+", label: "Years of Engineering Experience" },
               { number: "4+", label: "Industry Verticals" },
               { number: "∞", label: "Commitment to Quality" },
             ].map((stat) => (
