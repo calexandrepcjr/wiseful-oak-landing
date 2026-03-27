@@ -15,10 +15,10 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
     >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={logoIcon} alt="Wiseful Oak Systems" className="w-10 h-10 md:w-12 md:h-12" />
-          <span className="font-display text-lg font-semibold text-foreground tracking-tight">
+          <img src={logoIcon} alt="Wiseful Oak Systems" className="w-12 h-12 md:w-14 md:h-14 drop-shadow-md" />
+          <span className="font-display text-xl md:text-2xl font-semibold text-foreground tracking-tight">
             Wiseful Oak Systems
           </span>
         </div>
