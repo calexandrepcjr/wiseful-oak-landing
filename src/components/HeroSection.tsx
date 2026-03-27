@@ -50,7 +50,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Over a decade of building sustainable architectures across healthcare,
+          Over 15 years of building sustainable architectures across healthcare,
           finance, logistics, and eCommerce. We turn complex challenges into
           elegant, high-impact systems.
         </motion.p>

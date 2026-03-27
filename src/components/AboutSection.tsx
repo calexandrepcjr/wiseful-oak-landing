@@ -15,13 +15,13 @@ const AboutSection = () => {
               About
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              A Decade of Building{" "}
+              15 Years of Building{" "}
               <span className="italic font-medium">What Matters</span>
             </h2>
             <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
               <p>
                 Wiseful Oak Systems is led by Carlos Alexandre, a seasoned
-                Software Development Engineer with over a decade of experience
+                Software Development Engineer with over 15 years of experience
                 delivering high-impact solutions across multiple industries.
               </p>
               <p>
@@ -45,7 +45,7 @@ const AboutSection = () => {
             className="space-y-6"
           >
             {[
-              { number: "10+", label: "Years of Engineering Experience" },
+              { number: "15+", label: "Years of Engineering Experience" },
               { number: "4+", label: "Industry Verticals" },
               { number: "∞", label: "Commitment to Quality" },
             ].map((stat) => (
