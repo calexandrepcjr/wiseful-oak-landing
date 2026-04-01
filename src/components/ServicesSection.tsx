@@ -74,7 +74,7 @@ const ServicesSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -85,13 +85,18 @@ const ServicesSection = () => {
               variants={fadeUp}
               className="group p-8 rounded-xl bg-card shadow-card hover:shadow-elevated transition-shadow duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-6 h-6 text-primary" />
+              <div className="flex items-start justify-between mb-5">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <span className="font-body text-xs uppercase tracking-widest text-accent">
+                  {service.outcome}
+                </span>
               </div>
               <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="font-body text-muted-foreground leading-relaxed">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </motion.div>
