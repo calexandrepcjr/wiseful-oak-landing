@@ -62,7 +62,7 @@ const AboutSection = () => {
           >
             {[
               { number: YEARS_OF_EXPERIENCE, label: "Years of Engineering Experience" },
-              { number: "≤4", label: "Focused, Highly Skilled Members per Initiative" },
+              { number: "≤4", label: "Senior Specialists per Engagement" },
               { number: "0", label: "Vendor Lock-in — Independence Is the Goal" },
             ].map((stat) => (
               <div
