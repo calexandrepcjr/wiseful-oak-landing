@@ -16,12 +16,12 @@ const AboutSection = () => {
             About
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-            More Than a Software House —{" "}
-            <span className="italic font-medium">Your Technology Branch</span>
+            Not a Software House —{" "}
+            <span className="italic font-medium">Your Embedded Tech Leadership</span>
           </h2>
           <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-3xl">
-            Wiseful Oak operates as an embedded technology partner within your business.
-            We don't just build software — we solve your core problems and enable you to operate independently.
+            We step in where execution, clarity, or structure is breaking down — embedding as a
+            senior team to restore direction, stabilize the core, and build foundations that last.
           </p>
         </motion.div>
 
