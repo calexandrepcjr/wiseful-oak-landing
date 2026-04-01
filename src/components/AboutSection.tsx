@@ -34,8 +34,8 @@ const AboutSection = () => {
             className="space-y-5 font-body text-muted-foreground leading-relaxed"
           >
             <p>
-              Led by Carlos Alexandre, with over {YEARS_OF_EXPERIENCE} years of engineering experience,
-              we engage either as an individual expert or as a specialized squad — addressing critical issues,
+              With over {YEARS_OF_EXPERIENCE} years of engineering experience, we engage either as
+              individual experts or as a specialized squad — addressing critical issues,
               stabilizing operations, and transitioning ownership back to your internal teams.
             </p>
             <p>
@@ -47,8 +47,8 @@ const AboutSection = () => {
               experienced technical guidance to structure your engineering organization.
             </p>
             <p>
-              Since 2023 we operate in the U.S. market through our LLC, positioning us
-              to support clients pursuing international expansion.
+              Since 2023 we serve U.S. clients directly, and in 2024 we established our LLC —
+              positioning us to support businesses pursuing international expansion.
             </p>
           </motion.div>
 
