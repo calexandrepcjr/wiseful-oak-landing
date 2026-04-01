@@ -1,30 +1,48 @@
 import { motion } from "framer-motion";
-import { Code, Layers, Zap, Shield } from "lucide-react";
+import { RefreshCw, Code, Users, TrendingDown, ClipboardList, Crown } from "lucide-react";
 
 const services = [
   {
-    icon: Layers,
-    title: "Architecture & Design",
+    icon: RefreshCw,
+    title: "Process Modernization",
+    outcome: "Operational Efficiency",
     description:
-      "Sustainable, scalable system architectures tailored to your business domain. From microservices to event-driven systems.",
+      "Redesign outdated workflows and legacy processes into streamlined, modern operations — reducing friction and unlocking scalability across your organization.",
   },
   {
     icon: Code,
-    title: "Full-Stack Development",
+    title: "Software Development & Analysis",
+    outcome: "Production-Ready Systems",
     description:
-      "End-to-end engineering of robust applications using modern stacks. Clean code, tested, production-ready.",
+      "End-to-end engineering of new platforms and stabilization of existing ones. From architecture through deployment — clean, tested, and built to evolve.",
   },
   {
-    icon: Zap,
-    title: "Technical Leadership",
+    icon: ClipboardList,
+    title: "Requirements Engineering",
+    outcome: "Clarity Before Code",
     description:
-      "Fractional CTO and tech lead services. Mentor your team, define standards, and accelerate delivery.",
+      "Translate business needs into precise technical specifications. We bridge the gap between stakeholders and engineering teams so nothing gets lost.",
   },
   {
-    icon: Shield,
-    title: "Legacy Modernization",
+    icon: Crown,
+    title: "Fractional Executive Leadership",
+    outcome: "Strategic Direction",
     description:
-      "Transform aging systems into modern, maintainable platforms without disrupting your operations.",
+      "Experienced CTO-level guidance on a part-time basis. Structure your engineering organization, define standards, mentor teams, and accelerate delivery.",
+  },
+  {
+    icon: TrendingDown,
+    title: "Cost Reduction",
+    outcome: "Sustainable Savings",
+    description:
+      "Identify and eliminate technical waste — from redundant infrastructure to inefficient processes. Optimize spend without sacrificing quality or velocity.",
+  },
+  {
+    icon: Users,
+    title: "Team Augmentation & Transition",
+    outcome: "Full Independence",
+    description:
+      "Deploy a specialized squad to stabilize critical operations, then systematically transition ownership back to your internal teams. Zero lock-in by design.",
   },
 ];
 
