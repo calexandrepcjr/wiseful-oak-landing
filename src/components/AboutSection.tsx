@@ -5,37 +5,51 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 md:py-32 bg-card">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-16"
+        >
+          <p className="font-body text-sm uppercase tracking-[0.25em] text-accent mb-3">
+            About
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+            More Than a Software House —{" "}
+            <span className="italic font-medium">Your Technology Branch</span>
+          </h2>
+          <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-3xl">
+            Wiseful Oak operates as an embedded technology partner within your business.
+            We don't just build software — we solve your core problems and enable you to operate independently.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            className="space-y-5 font-body text-muted-foreground leading-relaxed"
           >
-            <p className="font-body text-sm uppercase tracking-[0.25em] text-accent mb-3">
-              About
+            <p>
+              Led by Carlos Alexandre, with over {YEARS_OF_EXPERIENCE} years of engineering experience,
+              we engage either as an individual expert or as a specialized squad — addressing critical issues,
+              stabilizing operations, and transitioning ownership back to your internal teams.
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-              {YEARS_OF_EXPERIENCE} Years of Building{" "}
-              <span className="italic font-medium">What Matters</span>
-            </h2>
-            <div className="space-y-4 font-body text-muted-foreground leading-relaxed">
-              <p>
-                Wiseful Oak Systems is led by Carlos Alexandre, a seasoned
-                Software Development Engineer with over {YEARS_OF_EXPERIENCE} years of experience
-                delivering high-impact solutions across multiple industries.
-              </p>
-              <p>
-                From founding engineering roles to complex enterprise systems,
-                Carlos brings deep technical expertise paired with a passion for
-                sustainable architecture and robust, maintainable code.
-              </p>
-              <p>
-                Based in São Paulo, serving clients globally. Every engagement is
-                treated as a partnership — deeply understanding your domain before
-                writing a single line of code.
-              </p>
-            </div>
+            <p>
+              In practice, we cover the full spectrum: <strong className="text-foreground">process modernization</strong>,{" "}
+              <strong className="text-foreground">cost reduction</strong>,{" "}
+              <strong className="text-foreground">software development & analysis</strong>,{" "}
+              <strong className="text-foreground">requirements engineering</strong>, and{" "}
+              <strong className="text-foreground">fractional executive leadership</strong> — providing
+              experienced technical guidance to structure your engineering organization.
+            </p>
+            <p>
+              Since 2023 we operate in the U.S. market through our LLC, positioning us
+              to support clients pursuing international expansion.
+            </p>
           </motion.div>
 
           <motion.div
@@ -47,8 +61,8 @@ const AboutSection = () => {
           >
             {[
               { number: YEARS_OF_EXPERIENCE, label: "Years of Engineering Experience" },
-              { number: "4+", label: "Industry Verticals" },
-              { number: "∞", label: "Commitment to Quality" },
+              { number: "≤4", label: "Lean, Specialized Team Members" },
+              { number: "0", label: "Vendor Lock-in — Independence Is the Goal" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -62,6 +76,14 @@ const AboutSection = () => {
                 </p>
               </div>
             ))}
+
+            <div className="p-6 rounded-xl border border-accent/20 bg-accent/5">
+              <p className="font-body text-sm text-foreground italic leading-relaxed">
+                "The objective is not to create dependency, but to solve the client's core problems
+                and enable them to operate independently. Over time, our role naturally shifts toward
+                that of a strategic technical advisor."
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>
