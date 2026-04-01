@@ -79,9 +79,8 @@ const AboutSection = () => {
 
             <div className="p-6 rounded-xl border border-accent/20 bg-accent/5">
               <p className="font-body text-sm text-foreground italic leading-relaxed">
-                "The objective is not to create dependency, but to solve the client's core problems
-                and enable them to operate independently. Over time, our role naturally shifts toward
-                that of a strategic technical advisor."
+                "We succeed when our clients no longer need us. Every engagement is designed to build
+                lasting capability — not lasting contracts."
               </p>
             </div>
           </motion.div>
