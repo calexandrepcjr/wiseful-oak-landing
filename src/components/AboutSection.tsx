@@ -80,8 +80,7 @@ const AboutSection = () => {
 
             <div className="p-6 rounded-xl border border-accent/20 bg-accent/5">
               <p className="font-body text-sm text-foreground italic leading-relaxed">
-                "We succeed when our clients no longer need us. Every engagement is designed to build
-                lasting capability — not lasting contracts."
+                "Clients should never feel dependent on us — only strengthened by the time we worked together."
               </p>
             </div>
           </motion.div>
