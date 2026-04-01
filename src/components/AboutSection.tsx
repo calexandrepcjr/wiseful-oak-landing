@@ -34,21 +34,22 @@ const AboutSection = () => {
             className="space-y-5 font-body text-muted-foreground leading-relaxed"
           >
             <p>
-              With over {YEARS_OF_EXPERIENCE} years of engineering experience, we engage either as
-              individual experts or as a specialized squad — addressing critical issues,
-              stabilizing operations, and transitioning ownership back to your internal teams.
+              Companies bring us in during moments of friction:{" "}
+              <strong className="text-foreground">scaling challenges</strong>,{" "}
+              <strong className="text-foreground">rising costs</strong>,{" "}
+              <strong className="text-foreground">unstable systems</strong>, or{" "}
+              <strong className="text-foreground">unclear ownership</strong>. With {YEARS_OF_EXPERIENCE} years
+              of engineering depth, we diagnose fast and deliver with precision.
             </p>
             <p>
-              In practice, we cover the full spectrum: <strong className="text-foreground">process modernization</strong>,{" "}
-              <strong className="text-foreground">cost reduction</strong>,{" "}
-              <strong className="text-foreground">software development & analysis</strong>,{" "}
-              <strong className="text-foreground">requirements engineering</strong>, and{" "}
-              <strong className="text-foreground">fractional executive leadership</strong> — providing
-              experienced technical guidance to structure your engineering organization.
+              Our work spans <strong className="text-foreground">modernization</strong>,{" "}
+              <strong className="text-foreground">cost optimization</strong>, and{" "}
+              <strong className="text-foreground">software development</strong> — but always with one
+              objective: leave your team and systems fully independent.
             </p>
             <p>
-              Since 2023 we serve U.S. clients directly, and in 2024 we established our LLC —
-              positioning us to support businesses pursuing international expansion.
+              Since 2023 we've served U.S. clients directly through our LLC — enabling
+              international companies to engage with minimal friction.
             </p>
           </motion.div>
 
