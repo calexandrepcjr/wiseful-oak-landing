@@ -1,6 +1,6 @@
 ---
 title: "Embedded Tech Leadership vs. Staff Augmentation"
-date: "2026-04-15"
+date: "2026-04-30"
 excerpt: "Why renting senior engineers by the hour rarely fixes the underlying problem — and what to do instead."
 author: "Wiseful Oak Systems"
 coverImage: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80"
