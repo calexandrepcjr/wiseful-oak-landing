@@ -95,7 +95,9 @@ export function getNewsBySlug(slug: string): NewsPost | undefined {
 }
 
 export function formatNewsDate(iso: string): string {
-  const d = new Date(iso);
+  // Parse YYYY-MM-DD as a local date so the displayed day doesn't shift across timezones.
+  const ymd = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const d = ymd ? new Date(Number(ymd[1]), Number(ymd[2]) - 1, Number(ymd[3])) : new Date(iso);
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
