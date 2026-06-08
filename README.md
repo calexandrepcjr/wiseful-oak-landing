@@ -77,6 +77,48 @@ npx playwright test
 npm run build
 ```
 
+## Deployment
+
+This site is a fully static SPA hosted on **GitHub Pages**. A GitHub Actions
+workflow (`.github/workflows/deploy.yml`) builds the app and publishes it on every
+push to `main` — nothing built is committed to the repo.
+
+**One-time setup:** In the repository, go to **Settings → Pages → Build and
+deployment** and set **Source = "GitHub Actions"**. The first push to `main` (or a
+manual run via the Actions tab) then deploys to:
+
+```
+https://calexandrepcjr.github.io/wiseful-oak-landing/
+```
+
+The build sets `VITE_BASE_PATH=/wiseful-oak-landing/` so assets resolve under the
+project sub-path, and copies `dist/index.html` to `dist/404.html` so client-side
+routes (e.g. `/news/<slug>`) survive a direct load or refresh.
+
+### Switching to the custom domain (wisefuloak.com)
+
+GitHub Pages supports custom domains for free, with auto-provisioned HTTPS. Because
+the old host keeps serving the domain until DNS is repointed, there is **no
+downtime** — only flip DNS after verifying the github.io deploy. When ready:
+
+1. **Base path → `/`:** remove the `VITE_BASE_PATH` line from
+   `.github/workflows/deploy.yml`. The Vite `base` and the React Router `basename`
+   then both become `/` automatically. (The OG image meta already points at
+   `https://wisefuloak.com/og-image.jpg`, so no metadata change is needed.)
+2. **Add the domain:** create `public/CNAME` containing `wisefuloak.com` (Vite copies
+   it into `dist/`), or set the domain under **Settings → Pages** (which commits the
+   CNAME for you).
+3. **DNS at your registrar:**
+   - Apex `wisefuloak.com` → four `A` records: `185.199.108.153`,
+     `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (plus the matching
+     `AAAA` records for IPv6).
+   - `www` → `CNAME` to `calexandrepcjr.github.io`.
+4. Once the certificate provisions, enable **"Enforce HTTPS"** under Settings → Pages.
+
+> **Note on the current host:** nothing in this repo points DNS or adds a `CNAME`
+> file, so `wisefuloak.com` keeps resolving to the existing host until you complete
+> step 3 above. The two hosts can run in parallel with no conflict.
+
 ## Project Structure
 
 ```
