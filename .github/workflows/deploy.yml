@@ -21,13 +21,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
+
+      - name: Setup Pages
+        # Verifies/initializes the Pages site and fails early with a clear message
+        # if Pages isn't enabled with "GitHub Actions" as the source.
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
