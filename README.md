@@ -103,19 +103,21 @@ downtime** — only flip DNS after verifying the github.io deploy. When ready:
 
 1. **Base path → `/`:** remove the `VITE_BASE_PATH` line from
    `.github/workflows/deploy.yml`. The Vite `base` and the React Router `basename`
-   then both become `/` automatically.
-2. **Update OG image URLs** in `index.html` from
-   `https://calexandrepcjr.github.io/wiseful-oak-landing/og-image.jpg` to
-   `https://wisefuloak.com/og-image.jpg`.
-3. **Add the domain:** create `public/CNAME` containing `wisefuloak.com` (Vite copies
+   then both become `/` automatically. (The OG image meta already points at
+   `https://wisefuloak.com/og-image.jpg`, so no metadata change is needed.)
+2. **Add the domain:** create `public/CNAME` containing `wisefuloak.com` (Vite copies
    it into `dist/`), or set the domain under **Settings → Pages** (which commits the
    CNAME for you).
-4. **DNS at your registrar:**
+3. **DNS at your registrar:**
    - Apex `wisefuloak.com` → four `A` records: `185.199.108.153`,
      `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (plus the matching
      `AAAA` records for IPv6).
    - `www` → `CNAME` to `calexandrepcjr.github.io`.
-5. Once the certificate provisions, enable **"Enforce HTTPS"** under Settings → Pages.
+4. Once the certificate provisions, enable **"Enforce HTTPS"** under Settings → Pages.
+
+> **Note on the current host:** nothing in this repo points DNS or adds a `CNAME`
+> file, so `wisefuloak.com` keeps resolving to the existing host until you complete
+> step 3 above. The two hosts can run in parallel with no conflict.
 
 ## Project Structure
 
