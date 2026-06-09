@@ -21,24 +21,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
+
+      - name: Setup Pages
+        # Verifies/initializes the Pages site and fails early with a clear message
+        # if Pages isn't enabled with "GitHub Actions" as the source.
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build
+        # Base path defaults to "/" for the custom domain (wisefuloak.com), served
+        # from the apex root. public/CNAME pins the domain on every deploy.
         run: npm run build
-        env:
-          # Temporary GitHub Pages project page lives under /wiseful-oak-landing/.
-          # When the custom domain (wisefuloak.com) is wired up, remove this line
-          # so the base path becomes "/".
-          VITE_BASE_PATH: /wiseful-oak-landing/
 
       - name: Add SPA fallback
         # GitHub Pages serves 404.html for unknown paths while keeping the URL,
