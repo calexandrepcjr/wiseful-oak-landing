@@ -38,12 +38,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        # Base path defaults to "/" for the custom domain (wisefuloak.com), served
+        # from the apex root. public/CNAME pins the domain on every deploy.
         run: npm run build
-        env:
-          # Temporary GitHub Pages project page lives under /wiseful-oak-landing/.
-          # When the custom domain (wisefuloak.com) is wired up, remove this line
-          # so the base path becomes "/".
-          VITE_BASE_PATH: /wiseful-oak-landing/
 
       - name: Add SPA fallback
         # GitHub Pages serves 404.html for unknown paths while keeping the URL,

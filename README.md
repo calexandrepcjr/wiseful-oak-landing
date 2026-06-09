@@ -91,33 +91,31 @@ manual run via the Actions tab) then deploys to:
 https://calexandrepcjr.github.io/wiseful-oak-landing/
 ```
 
-The build sets `VITE_BASE_PATH=/wiseful-oak-landing/` so assets resolve under the
-project sub-path, and copies `dist/index.html` to `dist/404.html` so client-side
-routes (e.g. `/news/<slug>`) survive a direct load or refresh.
+The build serves from the apex root (`base` = `/`) and copies `dist/index.html` to
+`dist/404.html` so client-side routes (e.g. `/news/<slug>`) survive a direct load or
+refresh. `public/CNAME` pins the custom domain on every deploy.
 
-### Switching to the custom domain (wisefuloak.com)
+### Custom domain (wisefuloak.com)
 
-GitHub Pages supports custom domains for free, with auto-provisioned HTTPS. Because
-the old host keeps serving the domain until DNS is repointed, there is **no
-downtime** — only flip DNS after verifying the github.io deploy. When ready:
+The code side is already in place: `public/CNAME` contains `wisefuloak.com`, the build
+serves from `/`, and the OG image points at `https://wisefuloak.com/og-image.jpg`.
+The remaining steps are the GitHub Pages setting and DNS (the actual cutover from the
+old host). GitHub Pages provides free auto-provisioned HTTPS for custom domains.
 
-1. **Base path → `/`:** remove the `VITE_BASE_PATH` line from
-   `.github/workflows/deploy.yml`. The Vite `base` and the React Router `basename`
-   then both become `/` automatically. (The OG image meta already points at
-   `https://wisefuloak.com/og-image.jpg`, so no metadata change is needed.)
-2. **Add the domain:** create `public/CNAME` containing `wisefuloak.com` (Vite copies
-   it into `dist/`), or set the domain under **Settings → Pages** (which commits the
-   CNAME for you).
-3. **DNS at your registrar:**
+1. **Settings → Pages → Custom domain:** enter `wisefuloak.com` and save. This starts
+   GitHub's DNS check and certificate provisioning.
+2. **DNS at your registrar** (this is the cutover — traffic moves off the old host here):
    - Apex `wisefuloak.com` → four `A` records: `185.199.108.153`,
      `185.199.109.153`, `185.199.110.153`, `185.199.111.153` (plus the matching
-     `AAAA` records for IPv6).
-   - `www` → `CNAME` to `calexandrepcjr.github.io`.
-4. Once the certificate provisions, enable **"Enforce HTTPS"** under Settings → Pages.
+     `AAAA` records `2606:50c0:8000::153`, `…8001::153`, `…8002::153`, `…8003::153`
+     for IPv6).
+   - `www.wisefuloak.com` → `CNAME` to `calexandrepcjr.github.io` (GitHub redirects
+     www → apex automatically).
+3. Wait for DNS to propagate and the cert to provision (minutes to a few hours), then
+   enable **"Enforce HTTPS"** under Settings → Pages.
 
-> **Note on the current host:** nothing in this repo points DNS or adds a `CNAME`
-> file, so `wisefuloak.com` keeps resolving to the existing host until you complete
-> step 3 above. The two hosts can run in parallel with no conflict.
+> Until the DNS records above are changed, `wisefuloak.com` keeps resolving to the old
+> host — so there is no downtime; the switch happens the moment DNS propagates.
 
 ## Project Structure
 
