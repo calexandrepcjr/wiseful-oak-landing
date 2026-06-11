@@ -3,7 +3,7 @@ title: "Instrument First: Why Session Replay Isn't Product Analytics"
 date: "2026-06-11"
 excerpt: "Teams reach for session replay to dodge the harder work of event design. Watching feels like progress, but it doesn't scale — and AI only amplifies whatever you actually captured."
 author: "Wiseful Oak Systems"
-coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80"
+coverImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80"
 tags: ["product analytics", "engineering"]
 ---
 
