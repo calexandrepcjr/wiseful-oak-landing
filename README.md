@@ -150,3 +150,24 @@ src/
 *Building what matters, with the expertise it deserves.*
 
 </div>
+
+## Engineering culture recommendations
+
+The homepage's engineering culture section is controlled in
+`src/data/leadership-recommendations.ts`:
+
+- Set `showEngineeringCulture = false` to hide the whole section.
+- Set an individual recommendation's `visible` field to `false` to hide just that quote.
+- Restore either value to `true` to display the retained content again.
+
+Commit the change to `main`; the normal GitHub Pages workflow deploys it.
+Hidden content is not rendered in the page or accessibility tree. This is a display
+control, **not a privacy control**: this repository and its history are public,
+and retained text may remain accessible in source code or built JavaScript.
+Hiding a quote does not revoke or erase previously published copies.
+
+Keep complete LinkedIn exports and private permission records outside this repository.
+The curated excerpts are personal recommendations about Carlos Alexandre and must
+retain their original wording, attribution, and professional context. They must
+not be relabeled as customer endorsements of Wiseful Oak. The site owner authorized
+this publication; that is not a record of the authors' permission for off-platform reuse.
